@@ -1,0 +1,34 @@
+<h1>Services</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Instructor Name</th>
+      <th>Duration</th>
+      <th>Format</th>
+      <th>Size</th>
+      <th>Frequency</th>
+      <th>Cost</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @services.each do |service| %>
+      <tr>
+        <td><%= service.title %></td>
+        <td><%= service.description %></td>
+        <td><%= service.instructor_name %></td>
+        <td><%= service.duration %></td>
+        <td><%= service.format %></td>
+        <td><%= service.size %></td>
+        <td><%= service.frequency %></td>
+        <td><%= number_to_currency(service.cost) %></td>
+        <td><%= service.status %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br/>
